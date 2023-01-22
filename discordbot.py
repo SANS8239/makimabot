@@ -1,8 +1,18 @@
 from cmath import log
 from distutils.sysconfig import PREFIX
-import discord
+import discord, asyncio
 from dotenv import load_dotenv
 import os
+from discord.ext import commands
+import time
+from youtube_dl import YoutubeDL
+import bs4
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from discord.utils import get 
+from discord import FFmpegPCMAudio
+from random import *
+
 load_dotenv()
 
 PREFIX = os.environ['PREFIX']
