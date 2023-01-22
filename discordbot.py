@@ -6,7 +6,7 @@ import os
 from discord.ext import *
 import time
 from youtube_dl import YoutubeDL
-import bs4
+import beautifulsoup4
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from discord.utils import get 
