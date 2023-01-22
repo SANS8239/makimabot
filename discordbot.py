@@ -3,7 +3,7 @@ from distutils.sysconfig import PREFIX
 import discord, asyncio
 from dotenv import load_dotenv
 import os
-from discord.ext
+from discord.ext import *
 import time
 from youtube_dl import YoutubeDL
 import bs4
