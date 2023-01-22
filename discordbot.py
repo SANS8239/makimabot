@@ -6,7 +6,7 @@ import os
 from discord.ext import *
 import time
 from youtube_dl import YoutubeDL
-import beautifulsoup4
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from discord.utils import get 
@@ -87,7 +87,7 @@ async def makima_play(ctx, *, msg):
         driver = webdriver.Chrome(chromedriver_dir)
         driver.get("https://www.youtube.com/results?search_query="+msg)
         source = driver.page_source
-        bs = bs4.BeautifulSoup(source, 'lxml')
+        bs = BeautifulSoup(source, 'lxml')
         entire = bs.find_all('a', {'id': 'video-title'})
         entireNum = entire[0]
         entireText = entireNum.text.strip()
